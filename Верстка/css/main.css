@@ -75,20 +75,21 @@ Header
   .navbar-collapse .navbar-nav li {
     width: 20%;
     border: 1px solid #000;
-    display: inline-block;
+    /*display:inline-block;*/
     text-align: center; }
     .navbar-collapse .navbar-nav li a {
       max-height: 50px;
       color: #000;
-      font-size: 16px;
-      /*line-height: 10px;*/ }
+      font-size: 16px; }
 
 @media screen and (max-width: 991px) {
   .div3 {
     display: none; }
 
   .navbar-nav li a {
-    font-size: 16px; } }
+    font-size: 16px;
+    padding: 0;
+    line-height: 50px; } }
 @media screen and (max-width: 767px) {
   .div2 {
     display: none; }
@@ -97,17 +98,17 @@ Header
     max-width: 100%;
     margin: auto; }
     .navbar-collapse .navbar-nav li {
-      width: 20%;
+      width: 100%;
+      /*width: 20%;*/
       height: 40px;
       border: 1px solid #e7e7e7;
       /*display:inline-block;*/
-      float: left;
+      /*float: left;*/
       margin: 0; }
       .navbar-collapse .navbar-nav li a {
-        font-size: 12px;
         padding-top: 0;
         padding-bottom: 0;
-        vertical-align: middle; }
+        line-height: 40px; }
 
   #navi ul li a {
     padding: 0; } }
@@ -192,5 +193,63 @@ About us
     text-align: center; }
   .about .partner p {
     text-align: center; }
+
+/****************************************************
+PaY
+***************************************************/
+.pay {
+  border: 1px solid black;
+  padding: 20px; }
+  .pay form {
+    padding: 0; }
+    .pay form .form-group {
+      padding: 0; }
+  .pay .variant {
+    /*line-height: 100px;*/
+    height: 100px;
+    overflow: hidden; }
+    .pay .variant h3 {
+      display: inline-block;
+      margin: 0; }
+    .pay .variant h3:before {
+      content: '';
+      display: inline-block;
+      margin: 5px;
+      position: relative;
+      top: 10px;
+      height: 45px;
+      width: 45px;
+      background: url(../img/pay.png) no-repeat; }
+    .pay .variant p {
+      margin-left: 75px; }
+  .pay .summa {
+    padding: 70px;
+    height: 500px;
+    border: 1px solid black; }
+    .pay .summa p {
+      text-align: center; }
+      .pay .summa p .btn {
+        width: 300px;
+        height: 80px;
+        margin-top: 15px;
+        max-width: 100%; }
+
+.currentproj {
+  border: 1px solid black; }
+
+.variant {
+  border: 1px solid black; }
+
+@media screen and (max-width: 767px) {
+  section .pay .variant h3 {
+    font-size: 18px; }
+  section .pay .summa {
+    padding: 10px;
+    height: auto; } }
+@media screen and (max-width: 991px) {
+  section .pay .summa {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto; } }
 
 /*# sourceMappingURL=main.css.map */
