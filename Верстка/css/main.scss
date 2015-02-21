@@ -82,13 +82,7 @@ Header
 .navbar {
 	margin-bottom:0;
 	background: #FFF;
-	/*padding: 0;*/
 	border: transparent;
-	/*border: transparent;*/
-	.container-fluid {
-		/*padding: 0;*/
-		
-	}
 }
 .navbar-collapse {
 
@@ -96,14 +90,17 @@ Header
 		width: 100%;
 		li {
 			width: 20%;
+			height: 50px;
 			border:1px solid #000;
 			/*display:inline-block;*/
 			text-align: center;
 			
 			a {
+				line-height: 50px;
 				max-height:50px;
 				color: #000;
 				font-size:16px;
+				padding: 0;
 			}
 		}
 	}
@@ -361,3 +358,33 @@ PaY
 	}
 	
 	}
+/****************************************************
+News
+****************************************************/
+.wrapper {
+	border: 1px solid black;
+	.news {
+		border: 1px solid black;
+		.mainnews {
+		border: 1px solid black;
+		padding: 10px;
+		.new {
+			margin-bottom: 20px;
+		}
+		
+	}
+	.additionalnews{
+			border: 1px solid black;
+			padding: 10px;
+		}
+	}
+	.sideproject {
+		border: 1px solid black;
+		.project {
+			border: 1px solid black;
+		}
+	}
+	
+	
+	
+}	
