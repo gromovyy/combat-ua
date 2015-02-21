@@ -1,0 +1,168 @@
+/* Максимальная ширина меню */
+/* Устанавливаем резиновость */
+/* Высота всего меню */
+/* Основной цвет ссылок */
+/* Возвращение к стандарным dropdown от бутсрапа */
+/* Основной background цвет если ничего не задавать в патерне*/
+/* Цвет шрифта в макете */
+/* Фактический размер шрифта на страничке */
+/* Hover опции */
+.navbar {
+  margin: 0px;
+  position: relative;
+  font-family: myriad pro !important;
+}
+.navbar-inner {
+  border-radius: 0px;
+  filter: none;
+  border: 0px;
+  background-color: #69b0dc;
+  background-image: none important;
+  background-image: linear-gradient(bottom, #629cc1 0%, #7dc4f0 100%);
+  background-image: -o-linear-gradient(bottom, #629cc1 0%, #7dc4f0 100%);
+  background-image: -moz-linear-gradient(bottom, #629cc1 0%, #7dc4f0 100%);
+  background-image: -webkit-linear-gradient(bottom, #629cc1 0%, #7dc4f0 100%);
+  background-image: -ms-linear-gradient(bottom, #629cc1 0%, #7dc4f0 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #629cc1), color-stop(1, #7dc4f0));
+  min-height: 42px;
+}
+
+.navbar .btn {
+  font-size: 15px;
+  padding: 4px 10px;
+  background: none;
+  text-shadow: none;
+}
+.navbar .btn:hover {
+  background: #69b0dc;
+}
+.navbar .caret {
+  border-top-color: #ffffff !important;
+  border-bottom-color: #ffffff !important;
+}
+.navbar .brand {
+  color: #ffffff;
+  text-shadow: none;
+  background-image: url(../img/logo.png);
+  height: 40px;
+  width: 113px;
+  padding: 0px !important;
+  padding-right: 10px;
+  margin-left: 12px;
+}
+.navbar .nav > li > a {
+  padding-top: 19px;
+  padding-bottom: 3px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 20px;
+  line-height: 20px;
+  color: #ffffff;
+  text-shadow: none;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.navbar .nav > li > a:hover {
+  background: #69b0dc;
+  color: #ffffff;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover,
+.navbar .nav .active > a:focus {
+  color: #ffffff;
+  box-shadow: none;
+  background: #cc412a ;
+}
+.dropdown-toggle {
+  background: red;
+}
+.nav-collapse a {
+  font-weight: normal ;
+  text-shadow: none ;
+}
+.dropdown-menu {
+  border-radius: 0px ;
+  box-shadow: none;
+  border-bottom: none ;
+  padding: 0px 0px;
+  margin: 0px;
+  border: none;
+  background: #69b0dc;
+}
+.dropdown-submenu > a:after {
+  margin-right: 0px;
+  border-left-color: #ffffff !important;
+}
+.dropdown-submenu > .dropdown-menu {
+  margin: 0px;
+}
+.dropdown-menu li a {
+  background: #69b0dc;
+  padding: 3px 5px;
+  color: #ffffff;
+  text-shadow: none ;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+  filter: none ;
+  background: #69b0dc;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.dropdown-menu::after,
+.dropdown-menu::before {
+  border: none !important;
+}
+/* For Responsive design */
+@media (max-width: 767px) {
+  .navbar {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .navbar .nav {
+    border: 0px ;
+  }
+  .navbar .nav > li > a {
+    border: 0px ;
+  }
+  .dropdown-menu a {
+    border-bottom: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .navbar .nav {
+    border: 0px ;
+  }
+  .navbar .nav > li > a {
+    border: 0px ;
+  }
+  .dropdown-menu a {
+    border-bottom: none !important;
+  }
+}
+/* Отображение не по клику а по наведению */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown:hover .dropdown-menu .dropdown-menu {
+  display: none;
+}
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block !important;
+}
+.nav li {
+  position: relative;
+}
+.navbar-inner > .container {
+  max-width: 980px;
+}
+/* Support classes */
+.transition {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+/* Calculations classes */

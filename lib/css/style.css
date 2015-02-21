@@ -1,0 +1,598 @@
+/* different needed */
+.loggedin{
+	margin: 15px 0;
+}
+.navigation img{
+	/* width: 10%;
+	height: auto; */
+}
+.navigation .g-menu-top{
+	/* float: left;
+	font-family: 'PF Agora Slab Pro Medium';
+	font-size: 34px;
+	height: 34px;
+	line-height: 34px;
+	margin-top: 12px; */
+}
+.right{
+	text-align: right;
+}
+.add{
+	margin: 15px 0;
+}
+.add a:first-child{
+	color: #FF4B4B;
+}
+.list-group-item i, .add a i, .files a i{
+	margin-right: 5px;
+}
+.add a + a{
+	margin-left: 20px;
+}
+table th{
+	white-space: nowrap;
+}
+/* tab specific */
+table > tbody > tr.started{
+	/*background: #FFFF70; */
+}
+td.overtime {
+	background-color: #FF3030 !important;
+}
+table > tbody > tr.work-open{
+	background-color: #8BF171;
+
+}
+table > tbody > tr.work-paused{
+	background: #FFFF70; 
+}
+
+table > tbody > tr.ready{
+	background-color: #C7C7C7;
+}
+table > tbody > tr.finished, table > tbody > tr.closed, table > tbody > tr.control{
+	background-color: #EEEEEE;
+}
+table > tbody > tr:hover > td{
+	background-color: rgba(0,0,255,0.1);
+}
+.menu i{
+	margin-right: 10px;
+}
+td.work-open{
+	color: green;
+}
+td.ended{
+	color: grey;
+}
+tr.foot{
+	background: #EEE;
+}
+tfoot tr{
+	border-top: 10px solid #fff;
+	background: #EEE;
+}
+.glyphicon-ok{
+	color: green;
+}
+.num input{
+	margin: 0 5px;
+
+}
+.num select {
+	margin-left: 20px;
+	width: 100px;
+	display: inline;
+}
+.num input[type="text"]{
+	width: 60px;
+	display: inline;
+}
+.period input[type="date"]{
+	width: 160px;
+	display: inline;
+}
+.period{
+	margin: 15px 0;
+}
+.menu .list-group{
+	margin-top: 15px;
+}
+.paginate {
+	text-align: center;
+}
+.paginate, .paginate .pagination{
+	margin-top: 0;
+}
+
+/* login-form */
+
+html, body, .container{
+	height: 100%;
+}
+.container{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.login-form{
+	width: 25em;
+	margin: auto;
+	border: 1px solid #e5e5e5;
+	border-radius: 4px 4px 0 0;
+	position: relative;
+}
+.login-form fieldset{
+	margin: auto;
+	padding: 50px 15px 15px 15px;
+	overflow: hidden;
+}
+.login-form legend{
+	background: #FFECFF;
+	padding: 10px;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.login-form input{
+	width: 100%;
+}
+.login-form label, .login-form a{
+	display: block;
+	margin-top: 15px;
+}
+.login-form a{
+	margin-bottom: 15px;
+}
+
+
+
+
+/* form specific */
+.new-issue label{
+/*	margin-top: 15px; */
+}
+.details p{
+	color: #9E9292;
+	margin-top: 5px;
+	font-size: 13px;
+}
+.files{
+	margin-top: 15px;
+}
+.inline{
+	display: inline-block;
+}
+
+/* some other things */
+
+#people a i{
+	float: right;
+}
+
+/******************** Start IC-CMS part ***********************/
+
+.active-view-mode .toolbox , .active-view-mode .tool-edit{
+	display: none;
+}
+/*  
+----------------------- Начало спрайта с инстурментами--------------------------------
+*/
+.toolbox,
+.toolbox-university {
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+ /* top: -13px;*/
+  right: 0;
+  height: 10px;
+  z-index: 1;
+  font-size: 10px;
+  line-height: 10px;
+  color: #999999;
+  font-weight: normal;
+  text-transform: none;
+}
+.toolbox-university {
+  right: 45px;
+}
+.toolbox span,
+.toolbox-university span {
+  float: right;
+  padding-left: 2px;
+  padding-right: 7px;
+}
+[class^="tool-"],
+[class*=" tool-"] {
+  float: right;
+  background-image: url(../img/system/toolbar.png);
+  width: 12px;
+  height: 12px;
+  margin-left: 1px;
+  padding: 0px ;
+  cursor: pointer;
+}
+.toolbox [class^="tool-"],
+.toolbox [class*=" tool-"] {
+  width: 10px;
+  height: 10px;
+  opacity: 0.7;
+}
+[class^="tool-"]:hover,
+[class*=" tool-"]:hover {
+  opacity: 1;
+}
+.tool-select {
+  background-position: 0px 0px;
+}
+.tool-add {
+  background-position: -14px 0px;
+}
+.tool-move-up {
+  background-position: -28px 0px;
+}
+.tool-move-down {
+  background-position: -42px 0px;
+}
+.tool-edit {
+  background-position: -56px 0px;
+}
+.tool-delete {
+  background-position: -70px 0px;
+}
+.tool-move-left {
+  background-position: -84px 0px;
+}
+.tool-move-right {
+  background-position: -95px 0px;
+}
+.tool-visible {
+  background-position: -110px 0px;
+}
+.tool-invisible {
+  background-position: -127px 0px;
+}
+.tool-delete-admin {
+  background-position: -144px 0px;
+}
+.tool-check-yes {
+  background-position: -163px -1px;
+}
+.tool-check-no {
+  background-position: -179px -1px;
+}
+/* Маленькие варианты всегда будут в тулбоксе */
+.toolbox .tool-select {
+  background-position: 0px 10px;
+}
+.toolbox .tool-add {
+  background-position: -14px 10px;
+}
+.toolbox .tool-move-up {
+  background-position: -28px 10px;
+}
+.toolbox .tool-move-down {
+  background-position: -42px 10px;
+}
+.toolbox .tool-edit {
+  background-position: -56px 10px;
+}
+.toolbox .tool-delete {
+  background-position: -70px 10px;
+}
+.toolbox .tool-move-left {
+  background-position: -84px 10px;
+}
+.toolbox .tool-move-right {
+  background-position: -95px 10px;
+}
+.toolbox .tool-visible {
+  background-position: -110px 10px;
+}
+.toolbox .tool-invisible {
+  background-position: -127px 10px;
+}
+.toolbox .tool-delete-admin {
+  background-position: -144px 10px;
+}
+.toolbox .tool-check-yes {
+  background-position: -163px 10px;
+}
+.toolbox .tool-check-no {
+  background-position: -179px 10px;
+}
+
+/******** Project list *********/
+.project-owner {
+	float: right;
+	font-size: 13px;
+	color: #DDD;
+}
+
+/******** Time tracker ********/
+.time-tracker{
+	position: fixed;
+	height: 40px;
+	bottom: 0px;
+	left: 0px;
+	background-color: #F2F2F2;
+	width: 100%;
+	
+}
+
+.working, .offline, .work-time, .work-log .open {
+	float: left;
+}
+
+.working, .offline {
+	width: 127px;
+	height: 118px;
+	background-position: center;
+	margin-top: -81px;
+	margin-left: 3px;
+	cursor: pointer;
+}
+
+.working {
+	background: url('../img/stop.png') no-repeat;
+}
+
+.offline {
+	background: url('../img/start.png') no-repeat;
+}
+.no-attachment {
+	display: none;
+}
+
+.attachment {
+	display: none;
+}
+.glyphicon-stop, .glyphicon-play , .glyphicon-pencil, .icon-remove{
+	cursor: pointer;
+}
+.glyphicon-log-out {
+	font-size:12px;
+}
+.glyphicon-pause, .glyphicon-stop {
+	margin-left: -2px;
+}
+
+#user-name {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-weight: bold;
+}
+
+.changed-role li>a {
+	background-color: #F3F3F3;
+}
+
+/******************* File button ****************/
+#file-name {
+	cursor: pointer;
+}
+
+input[type=file] {
+	display: none;
+}
+
+i.glyphicon.icon-remove {
+	float: right;
+}
+
+/***************** Project access ***************/
+.project-access {
+	margin-bottom: 30px;
+	border-bottom: 1px solid #CCC;
+	padding-bottom: 20px;
+	
+}
+.project-access > div {
+	padding-right:	15px;
+	margin-right: 15px;
+	display: inline-block;
+	position: relative;
+}
+
+.project-access > div .toolbox-wrapper {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.project-access .contenter-input {
+	min-width: 100px !important;
+}
+
+div.date-column{
+	width: 75px;
+	display: block;
+}
+
+div.button-column{
+	width: 22px;
+}
+
+div.project-column{
+	min-width: 105px;
+}
+
+div.task-column{
+	min-width: 200px;
+}
+
+.table th {
+	font-size: 12px;
+}
+
+.description td>div {
+	display: none;
+}
+
+.description td {
+	padding: 0px !important;
+	margin: 0px;	
+	border-top: none !important;
+}
+
+span.error {
+	float: left;
+	display: none;
+	color: red;
+}
+
+#Task_list .table>tbody>tr>td, #Task_time_list  .table>tbody>tr>td{
+	border-left: 1px solid #ddd;
+	padding: 4px;
+}
+
+#Task_list .table>tbody>tr>td p, #Task_time_list  .table>tbody>tr>td p{
+	margin: 0px;
+}
+
+a {
+	cursor: pointer;
+}
+.table tr:last-child td {
+	border-bottom: 1px solid #ddd;
+}
+.table tr td:last-child {
+	border-right: 1px solid #ddd;
+}
+.top-row {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+th.sortable {
+	cursor: pointer;
+}
+th.sortable:hover {
+	text-decoration:underline;
+}
+.glyphicon-arrow-down, .glyphicon-arrow-up {
+	margin-left: 2px;
+	font-size: 8px;
+	/*color: #428bca; */
+}
+
+tr.new {
+	font-weight:bold;
+}
+
+.numberCircle {
+    border-radius: 50%;
+	behavior: url(PIE.htc);
+	width: 20px;
+	height: 20px;
+	padding: 3px;
+	background: #fff;
+	/* border: 2px solid #666; */
+	color: #428bca;
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+	background-color: #FFFF70;
+	/* border: 1px solid rgb(160, 186, 194); */
+	position: absolute;
+	top: -4px;
+	right: 0px;
+}
+/************ Task checkmark **********************/
+.checkmark-yes, .checkmark-no, .checkmark-blue-yes, .checkmark-blue-no {
+	margin:auto;
+	cursor: pointer;
+	width:21px;
+	height:19px;
+	border-radius: 5px;
+	opacity: 0.8;
+}
+
+.checkmark-yes:hover, .checkmark-no:hover, .checkmark-blue-yes:hover, .checkmark-blue-no:hover {
+	opacity: 1;
+}
+
+.checkmark-yes, .checkmark-blue-yes {
+	background: url('../img/checkmark/checkmark_yes.png');
+}
+
+.checkmark-no, .checkmark-blue-no {
+	background: url('../img/checkmark/checkmark_no.png');
+}
+
+.checkmark-yes, .checkmark-no {
+	border: 1px solid green;
+}
+
+.checkmark-blue-yes, .checkmark-blue-no {
+	border: 1px solid blue;
+}
+
+.table>thead>tr>th {
+	border-bottom: 1px solid #ddd;
+}
+
+.summary {
+	background-color: #F3F3F3;
+	margin-top: 5px; 
+	margin-bottom: 5px; 
+	color: #428bca;
+}
+.ui-datepicker-close {
+	/*display: none;*/	
+}
+
+.ui-timepicker-div dt {
+	font-size: 13px;
+	font-weight: normal;
+}
+
+.description .row {
+	border-top: 1px dotted #CCC;
+	margin: 0px;
+	background-color: #F5F5F5;
+}
+
+.description .row>div {
+	padding-left: 4px;
+	padding-right: 8px;
+}
+.description .row>div:first-child{
+	margin-right: -30px;
+}
+
+.profile .col-xs-10 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.form-group {
+	margin-bottom: 10px !important;
+}
+.modal-footer {
+	margin-top: 0px !important;
+}
+.modal-body .col-xs-6 {
+	padding-right: 0px;
+}
+
+#loading-block{
+	display:block;
+	position:fixed;
+	width:	100%;
+	height:	100%;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(0,0,0,0.2);
+	z-index: 10000;
+}
+
+#loading-indicator{
+	position: absolute;
+	left: 50%;
+	top: 300px;
+	margin-left: -400px;
+	margin-top: -400px;
+}

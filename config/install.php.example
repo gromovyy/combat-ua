@@ -1,0 +1,200 @@
+<?php
+error_reporting(0);
+if(isset($_GET['step'])){$step = $_GET['step'];}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="stylesheet" type="text/css" href="/vw/develop/css/bootstrap3.css">
+
+
+
+<link href='http://fonts.googleapis.com/css?family=Russo+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+
+
+<link rel="stylesheet" type="text/css" href="/vw/develop/css/systemLayout.css">
+<title>Установка IC-CMS</title>
+
+</head>
+<body>
+<center>
+<h1>Установка IC-CMS</h1>
+</center>
+<div class="container"> 
+                    <?php if(empty($step)){ ?>
+									<h1 id="logo"><a href="http://ic.cms.com/">Logo</a></h1>
+<div class="row ">
+<div class="col-lg-6">
+									<p>Добро пожаловать. Прежде чем мы начнём, потребуется информация о базе данных. Вот что вы должны знать до начала процедуры установки.</p>
+									<ol>
+										<li>Имя базы данных</li>
+										<li>Имя пользователя базы данных</li>
+										<li>Пароль к базе данных</li>
+										<li>Адрес сервера базы данных</li>
+									</ol>
+									<p><strong>Если по какой-то причине автоматическое создание файла не удалось, не волнуйтесь. Всё это предназначено лишь для заполнения файла настроек. Вы можете просто открыть <code>config/config.php.example</code> в текстовом редакторе, внести вашу информацию и сохранить его под именем <code>config/config.php</code>.</strong></p>
+									<p>Скорее всего, эти данные были предоставлены вашим хостинг-провайдером. Если у вас нет этой информации, свяжитесь с их службой поддержки или с вашим знакомым програмистом. А если есть…</p>
+
+									<p class="step"><a href="install.php?step=1" class="button button-large">Начинаем установку!</a></p>
+</div>
+</div>
+                    <?php } ?>
+                <!-- ШАГ 1 -->
+                    <?php if($step == 1){ ?>
+							<h1 id="logo"><a href="http://ic.cms.com/">Logo</a></h1>
+							<form method="post" action="?step=2">
+								<p>Введите здесь информацию о подключении к базе данных. Если вы в ней не уверены, свяжитесь с хостинг-провайдером.</p>
+								<table class="form-table">
+									<tbody><tr>
+										<th scope="row"><label for="dbname">Имя базы данных</label></th>
+										<td><input name="dbname" id="dbname" type="text" size="25" value="ic-cms"></td>
+										<td>Имя базы данных, в которую вы хотите установить IC-CMS.</td>
+									</tr>
+									<tr>
+										<th scope="row"><label for="user">Имя пользователя</label></th>
+										<td><input name="user" id="user" type="text" size="25" value="user"></td>
+										<td>Имя пользователя MySQL</td>
+									</tr>
+									<tr>
+										<th scope="row"><label for="pass">Пароль</label></th>
+										<td><input name="pass" id="pass" type="text" size="25" value="pass"></td>
+										<td>…и пароль пользователя MySQL.</td>
+									</tr>
+									<tr>
+										<th scope="row"><label for="host">Сервер базы данных</label></th>
+										<td><input name="host" id="host" type="text" size="25" value="localhost"></td>
+										<td>Если вы устанавливате IC-CMS на простой хостинг  или на локальный компьютер, сервером будет <code>localhost</code>. Если <code>localhost</code> не работает, нужно узнать правильный адрес в службе поддержки хостинг-провайдера.</td>
+									</tr>
+								</tbody></table>
+									<p class="step"><input name="submit" type="submit" value="Соединяемся с бд!" class="button button-large"></p>
+							</form>
+
+
+
+
+
+                    <?php } ?>
+                <!-- ШАГ 1 -->
+                
+                <!-- ШАГ 2 -->
+                    <?php if($step == 2){ 
+						// Установка Базы данных
+						$mysqli = new mysqli($_POST['host'], $_POST['user'], $_POST['pass'], $_POST['dbname']);
+							if ($mysqli->connect_error) {
+							die('Упс! Что то пошло не так... <br>Пожалуй нужно вернутся на предыдущую страничку и проверить даные доступа к БД');
+							} else{
+							$config = file_get_contents('config/config.php.example');
+							$config = preg_replace('|dbuser|', $_POST['user'], $config);
+							$config = preg_replace('|dbpass|', $_POST['pass'], $config);
+							$config = preg_replace('|dbhost|', $_POST['host'], $config);
+							$config = preg_replace('|dbname|', $_POST['dbname'], $config);
+							file_put_contents("config/config.php",$config);
+							
+							require ('lib/php/autoloader.php');
+							require ('config/config.php');
+							$obj = new Updater();
+							$obj->e_UpdateFromFileAll();
+							} 
+					?>
+                        <h2>
+							Соединение успешно!
+							<p class="step"><a href="?step=3" class="button button-large">Начинаем установку!</a></p>
+
+							</h2>
+                    <?php } ?>
+                <!-- ШАГ 2 -->
+                
+                <!-- ШАГ 3 -->
+                    <?php if($step == 3){ 
+
+					?>
+                        							<h1 id="logo"><a href="http://ru.wordpress.org/">WordPress</a></h1>
+
+							<h1>Добро пожаловать</h1>
+							<p>Добро пожаловать в знаменитую пятиминутную установку WordPress! Вы можете просмотреть на досуге <a href="../readme.html">документацию ReadMe</a>. Или просто заполните информацию ниже — и вперёд, к использованию самой расширяемой и мощной персональной платформы для публикаций в мире!</p>
+
+							<h1>Требуется информация</h1>
+
+							<form id="setup" method="post" action="install.php?step=4">
+								<table class="form-table">
+									<tbody><tr>
+										<th scope="row"><label for="weblog_title">Название сайта</label></th>
+										<td><input name="weblog_title" type="text" id="weblog_title" size="25" value=""></td>
+									</tr>
+									<tr>
+										<th scope="row"><label for="email">Имя пользователя</label></th>
+										<td>
+										<input name="email" type="email" id="email" size="25" value="admin">
+											<p>Имя пользователя может содержать только латинские буквы, пробелы, подчёркивания, дефисы, точки и символ @.</p>
+													</td>
+									</tr>
+											<tr>
+										<th scope="row">
+											<label for="admin_password">Пароль, дважды</label>
+											<p></p>
+										</th>
+										<td>
+											<input name="password" type="password" id="password" size="25" value="">
+											<p><input name="password2" type="password" id="password2" size="25" value=""></p>
+											<p>Подсказка: Пароль должен состоять как минимум из семи символов. Чтобы сделать его надёжнее, используйте буквы верхнего и нижнего регистра, числа и символы наподобие ! " ? $ % ^ &amp; ).</p>
+										</td>
+									</tr>
+											<tr>
+										<th scope="row"><label for="site_email">e-mail сайта</label></th>
+										<td><input name="site_email" type="text" id="site_email" size="25" value="">
+										<p>Внимательно проверьте адрес электронной почты, перед тем как продолжить.</p></td>
+									</tr>
+
+								</tbody></table>
+								<p class="step"><input type="submit" name="Submit" value="Установить IC-CMS" class="button button-large"></p>
+							</form>
+
+
+
+
+
+							<hr>
+							<h2>
+							Кнопка "Готово"
+							</h2>
+							<hr>
+                    <?php } ?>
+                <!-- ШАГ 3 -->
+				
+                <!-- ШАГ 4 -->
+                    <?php if($step == 4){ 
+							$chars="qazxswedcvfrtgbnhyujmkiolp1234567890QAZXSWEDCVFRTGBNHYUJMKIOLP"; 
+							$max=8; 
+							$size=StrLen($chars)-1; 
+							$cmspass=null; 
+							while($max--) {$cmspass.=$chars[rand(0,$size)]; }
+					
+					
+					
+							$config = file_get_contents('config/config.php');
+							$config = preg_replace('|admin@site.org|', $_POST['site_email'], $config);
+							file_put_contents("config/config.php",$config);
+							
+							require ('lib/php/autoloader.php');
+							require ('config/config.php');
+							$obg = new EmailPasAuth();
+							if (($_POST['password']===$_POST['password']) or empty($_POST['password'])){ $pass = $cmspass;}else{$pass = $_POST['password'];}
+							$name = $_POST['email'];
+							$obg->register_first_user($name,$pass);
+							echo "Можете зайти на сайт с имененем $name и паролем $pass";
+							unlink('install.php');
+					
+					?>
+                        
+                    <?php } ?>
+                <!-- ШАГ 4 -->
+</div> 
+</body>
+  <!-- ТЕЛО -->
+</html>
