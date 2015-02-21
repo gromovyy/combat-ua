@@ -182,4 +182,15 @@ Footer
   .footer h3 {
     font-weight: bold; }
 
+/******************************************************
+About us
+****************************************************/
+.about {
+  border: 1px solid #000;
+  padding: 20px; }
+  .about h2 {
+    text-align: center; }
+  .about .partner p {
+    text-align: center; }
+
 /*# sourceMappingURL=main.css.map */
