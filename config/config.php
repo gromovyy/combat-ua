@@ -11,7 +11,7 @@
  * @global string $GL_SITE_NAME = "TimeTracker";
  * @name $GL_SITE_NAME = "TimeTracker";
  */
-$GL_SITE_NAME = "TimeTracker";
+$GL_SITE_NAME = "Combat-ua";
 
 /**
  * Язык сайта
@@ -33,7 +33,7 @@ $GL_EMAIL = "admin@admin.com";
  * @global string $GL_HOST = "localhost";
  * @name $GL_HOST = "localhost";
  */
-$GL_HOST = "localhost";
+$GL_HOST = "127.0.0.1";
 
 /**
  * Имя БД
@@ -61,7 +61,7 @@ $GL_DB_PASSW = "";
  * @global string $GL_SITE_DIR = "Z:\home\localhost\www\timetracker";
  * @name $GL_SITE_DIR = "Z:\home\localhost\www\timetracker";
  */
-$GL_SITE_DIR = 'tracker';
+$GL_SITE_DIR = 'combat-ua';
 
 /**
  * Количество сообщений на странице

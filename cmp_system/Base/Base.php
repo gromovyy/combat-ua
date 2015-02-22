@@ -106,6 +106,7 @@ class Base
 
 	 
 	public static $baseUrl;
+	public static $sql_log_buffer;
 
 	/**
 	 * Переменная хранит имя компонента
