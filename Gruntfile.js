@@ -9,12 +9,12 @@ module.exports = function(grunt) {
     dploy: {                                            // Task
       stage: {                                          // Target
         host: "icgroup.ftp.ukraine.com.ua",                  // Your FTP host
-        user: "icgroup_ftp",  // Your FTP user
-        pass: "4NB43ksb6d",
+        user: "icgroup_volunteer",  // Your FTP user
+        pass: "it-volunteer",
         exclude: ["Gruntfile.js", "package.json", "node_modules/*","readme.md","testmails/*"], // Убираем из деплоя на ftp ненужные там файлы
         path: {
           local: "",                            // The local folder that you want to upload
-          remote: "/it-factory.pro/combat_ua"                            // Where the files from the local file will be uploaded at in your remote server
+          remote: ""                            // Where the files from the local file will be uploaded at in your remote server
         }
       }
     },
