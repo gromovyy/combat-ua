@@ -4,21 +4,17 @@ module.exports = function(grunt) {
                                                 // gtunt --m="commit message goes here"
 
   grunt.initConfig({
-      pkg: grunt.file.readJSON('package.json'),
-
     dploy: {                                            // Task
       stage: {                                          // Target
         host: "icgroup.ftp.ukraine.com.ua",                  // Your FTP host
         user: "icgroup_volunteer",  // Your FTP user
-        pass: "it-volunteer",
-        exclude: ["Gruntfile.js", "package.json", "node_modules/*","readme.md","testmails/*"], // Убираем из деплоя на ftp ненужные там файлы
+        pass: "it-volunteer",                               // Your FTP secret-password
         path: {
-          local: "",                            // The local folder that you want to upload
-          remote: ""                            // Where the files from the local file will be uploaded at in your remote server
+            local: "",          // The local folder that you want to upload
+            remote: "/combat-ua"          // Where the files from the local file will be uploaded at in your remote server
         }
       }
     },
-
     gitcommit: {
       task:{
         options: {
@@ -46,7 +42,6 @@ module.exports = function(grunt) {
         }
       }
     },
-
   });
 
   grunt.loadNpmTasks('grunt-dploy');
@@ -54,4 +49,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-git');
   // 4. Указываем, какие задачи выполняются, когда мы вводим «grunt» в терминале
   grunt.registerTask('default', ['gitcommit', 'gitpull', 'gitpush', 'dploy']); //, 'dploy']);
+
 };
