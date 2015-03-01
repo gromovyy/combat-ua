@@ -43,7 +43,7 @@ class Site extends Contenter
 		$this->Rule->getCmpRules($this->User->getRole());
 		
 		// Временно, пока не работает страничка с настройками сайта
-		self::$settings['is_authorize'] = true;
+		self::$settings['is_authorize'] = false;
 		
 		// Работаем с мультиязычностью
 		//if (isset($this->Lang))
@@ -347,9 +347,12 @@ class Site extends Contenter
 		$this->loadView('page_not_found');
 	}
 	
+	// Вывод списка типов страниц
 	function e_PageType() {
-		if (!($this->User->getRole()=="administrator")) return false;
+		if (!($this->User->getRole()=="administrator"))
+			$this->redirect("login");
 		$page_type_list = $this->getList('page_type');
+		//print_r($page_type_list);
 		$page_position_list = $this->getList('page_position');
 		$data['page_type_list'] = Array();
 		foreach ($page_type_list as $page_type) {
@@ -360,8 +363,8 @@ class Site extends Contenter
 		}
 		
 		$data['combo_component'] = $this->Component->combo_component();
-		//$data['combo_base_view'] = $this->Component->combo_view('Site');
-		$data['combo_base_view'] = $this->combo_base_view();
+		$data['combo_base_view'] = $this->Component->combo_view('Site');
+		//$data['combo_base_view'] = $this->combo_base_view();
 		$data['combo_theme_view'] = $this->combo_theme_list();
 		
 		$this->loadView('page_type_list', $data);
@@ -441,6 +444,10 @@ class Site extends Contenter
 	// Функция для пустого вывода в позицию
 	public function e_Empty() {
 		return '';
+	}
+	
+	public function e_Main(){
+		$this->loadView('main');
 	}
 	
 	
