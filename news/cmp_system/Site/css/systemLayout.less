@@ -1,0 +1,63 @@
+/*  =======================================================================  *\
+    Импорты  
+\*  =======================================================================  */
+@import url(http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic,cyrillic-ext);
+//@import 'https://dl.dropboxusercontent.com/u/947113/ic-css/ic-css.less';
+@import '../../../../../../Public/ic-css/ic-css.less';
+@import 'font-awesome/less/font-awesome.less';
+@import 'mixins/menu.less';
+
+
+body{
+	background: url("../img/system/bg.png") #F5FCFF repeat-x;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:14px;
+}
+h1{
+font-family: 'Ubuntu', sans-serif;
+}
+ 
+// Глобальные стили
+*{
+	margin:0;
+	padding:0;
+	-webkit-font-smoothing:subpixel-antialiased ;
+}
+
+.debug:before{
+background-color:rgba(255, 255, 255, 0.86);
+color:#000;
+//opacity:0.7;
+content: attr(id);
+position:absolute;
+z-index:9001;
+float:left;
+left:0;
+outline:1px solid red;
+}
+
+
+ 
+
+
+//     Таблици
+.table {
+	#ic.table(); 
+		thead{
+			background-color:#f6f6f6;
+		}
+}
+.table-bordered{
+	#ic.table-bordered();
+	//#ic.tabble-rounded();
+}
+
+/* tbody { counter-reset: item }
+//LI { display: block }
+tr td:first-child::after { 
+display:table-cell;
+float:right;
+content: counter(item) " "; 
+counter-increment: item 
+
+} */

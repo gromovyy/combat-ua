@@ -1,0 +1,160 @@
+.forum-title, .forum-title a {
+	font-family: Arial;
+	font-size: 12px;
+	color: #FFDA04;
+}
+
+.object-link {
+	float:right;
+}
+.forum {
+	height: 60px;
+}
+.forum-line{
+	z-index: 7;
+	width: 930px;
+	height: 1px;
+	background: url(../img/bbb.jpg) center repeat-x;
+}
+
+.forum-table{
+	border-collapse: collapse;
+	text-align:center;
+	width: 100%;
+}
+.forum-table td{
+	border-bottom: 1px solid #CCC;
+}
+.forum-table tr:first-child{
+	font-size:10px;
+	text-transform:uppercase;
+	text-align:center;
+	color:grey;
+}
+
+.forum-table tr:first-child th:first-child{
+	text-align:left;
+}
+
+.forum-topic {
+	text-align:left;
+}
+
+.topic-count {
+	width:30px;
+	font-size:10px;
+	color:grey;
+}
+.comment-count {
+	width:80px;
+	font-size:10px;
+	color:grey;
+}
+.forum-author, .forum-author a {
+	font-size:10px;
+}
+
+.last-comment, .last-comment a  {
+	width: 110px;
+	font-size:10px;
+	color:grey;
+}
+.active-edit-mode .forum-table .forum-control {
+	width: 200px;
+}
+.active-view-mode .forum-table .forum-control {
+	display:none;
+}
+
+.last-comment-header{
+	font-family: Impact;
+	font-size: 24px;
+	text-transform: uppercase;
+	float: left;
+	color: #DD2A2A;
+	letter-spacing: 2px;
+}
+
+.forum-header {
+	margin-top: 10px;
+	font-family: Impact;
+	letter-spacing: 2px; 
+	font-size: 24px;
+	text-align: left;
+	font-weight: normal;
+}
+
+.forum-description {
+	/*color: #ACABAB;
+	font-family: Trebuchet MS,Verdana, Arial, Helvetica, sans-serif;*/
+	overflow: hidden;
+	text-align: left;
+	font-weight: normal;
+}
+
+.forum-toolbox{
+	float:right;
+	width: 320px;
+	height: 30px;
+
+}
+.forum-toolbox a{
+	background-repeat:no-repeat;
+	margin-right:5px;
+}
+
+.automatic-topic-insert{
+	background-image: url('../img/automatic_topic_insert.png');
+	cursor:pointer;
+	width: 15px;
+	height: 15px;
+	float:right;
+}
+
+.manual-topic-insert{
+	background-image: url('../img/manual_topic_insert.png');
+	cursor:pointer;
+	width: 15px;
+	height: 15px;
+	float:right;
+}
+
+.topic-insert-member{
+	background-image: url('../img/topic_insert_member.png');
+	cursor:pointer;
+	width: 15px;
+	height: 15px;
+	float:right;
+}
+.topic-insert-admin{
+	background-image: url('../img/topic_insert_admin.png');
+	cursor:pointer;
+	width: 15px;
+	height: 15px;
+	float:right;
+}
+
+.forum-delete{
+	background-image: url('../img/forum_delete.png');
+	cursor:pointer;
+	width: 11px;
+	height: 12px;
+	float:right;
+}
+
+.forum-move-up{
+	background-image: url('../img/move_up.png');
+	cursor:pointer;
+	width: 12px;
+	height: 15px;
+	float:right;
+}
+
+.forum-move-down{
+	background-image: url('../img/move_down.png');
+	cursor:pointer;
+	width: 12px;
+	height: 15px;
+	float:right;
+}
+

@@ -1,0 +1,17 @@
+# Кеширование файлов
+#<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
+#Header set Cache-Control "max-age=2592000"
+#</FilesMatch>
+
+# Необходимые перенаправления для работы IC-CMS
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+
+# Установка защиты на sql
+<Files "*.sql">
+order allow,deny
+deny from all
+</Files>
+ErrorDocument 403 /index.php

@@ -1,0 +1,42 @@
+<?php
+	//print_r($data); // Полученые даные из модуля.
+	$view_update_link='Photo/PhotoType';
+?>
+<table class="table">
+	<thead>
+		<tr>
+			<th>photo_type        </th>
+			<th>default_folder    </th>
+			<th>default_img       </th>
+			<th>small_resize_type </th>
+			<th>small_max_width   </th>
+			<th>small_max_height  </th>
+			<th>normal_resize_type</th>
+			<th>normal_max_width  </th>
+			<th>normal_max_height </th>
+			<th>is_full_save      </th>
+			<th>is_full_preview   </th>
+			<th>is_user_delete    </th>
+			<th>inside_color      </th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach ($types as $type){ ?>
+		<tr>
+			<td><?php echo $type['photo_type'        ]; ?></td>
+			<td><?php echo $type['default_folder'    ]; ?></td>
+			<td><?php echo $type['default_img'       ]; ?></td>
+			<td><?php echo $type['small_resize_type' ]; ?></td>
+			<td><?php echo $type['small_max_width'   ]; ?></td>
+			<td><?php echo $type['small_max_height'  ]; ?></td>
+			<td><?php echo $type['normal_resize_type']; ?></td>
+			<td><?php echo $type['normal_max_width'  ]; ?></td>
+			<td><?php echo $type['normal_max_height' ]; ?></td>
+			<td><?php echo $type['is_full_save'      ]; ?></td>
+			<td><?php echo $type['is_full_preview'   ]; ?></td>
+			<td><?php echo $type['is_user_delete'    ]; ?></td>
+			<td><?php echo $type['inside_color'      ]; ?></td>
+		</tr>
+	<?php } ?>
+	</tbody>
+</table>
