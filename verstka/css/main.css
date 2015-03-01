@@ -144,7 +144,7 @@ Section
 .thumbnail {
   /*margin-right: 30px;*/
   padding: 20px 44px 25px;
-  width: 445px;
+  width: 445px;                     
   /*height: 465px;*/
   background: #fff;
   margin-bottom: 0;
@@ -185,7 +185,7 @@ Section
     font-weight: bold; }
 
 .btn {
-  width: 250px;
+  width: 250px;                    
   height: 45px;
   line-height: 45px;
   padding: 0;
@@ -508,5 +508,50 @@ height:310px !important;
 .embed-responsive.embed-responsive-16by9{
 padding-bottom:36.35% !important;
 }
+
+/*NEWS*/
+.news p, .news h4, .news .date, .news h3{
+    color: #fff;
+}
+section .wrapper{
+    background: rgba(0,0,0,0.7);
+    margin-top: 19px;
+    margin-bottom: 19px;
+    border-radius: 5px;
+}
+.sideproject .project .thumbnail{
+    margin: 20px 0 20px 0;
+    height: 350px;
+    padding: 4px;
+    min-width: 0;
+    max-width: 250px;
+}
+
+.sideproject .project .thumbnail .description p.col-xs-2 {
+        text-align: left;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+}
+.sideproject .project .thumbnail .description p.col-xs-8 {
+        text-align: right;
+        padding-left: 0;
+        padding-right: 0;
+}
+.sideproject .btn{
+        margin-left: 0;
+        max-width: 129.5px;
+}
+footer .footer{
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px 5px 0 0;
+}
+
+
+
+
+
+
+
 
 /*# sourceMappingURL=main.css.map */
