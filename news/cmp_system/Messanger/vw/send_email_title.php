@@ -1,1 +1,0 @@
-<span class="text-title">Відправка email-повідомлень учасникам змагань</span>

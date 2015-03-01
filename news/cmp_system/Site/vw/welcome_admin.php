@@ -1,1 +1,0 @@
-<h1> Welcome to admin panel of IC-CMS </h1>
