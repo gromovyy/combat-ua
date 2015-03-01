@@ -64,7 +64,7 @@ header {
 
 .news {
   clear: both;
-  height: 150px;
+  /*height: 150px;*/      /*“”“ «¿ ŒÃ≈Õ“”¬¿À¿ Ã¿–»Õ¿ ƒÀﬂ NEWS*/       
   margin-top: 5px;
   margin-bottom: 10px; }
   .news li {
@@ -374,26 +374,29 @@ section .wrapper{
 }
 
 .sideproject .project .thumbnail .description p.col-xs-2 {
-        text-align: left;
-        padding-left: 0;
-        padding-right: 0;
-        margin-left: 0;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
 }
 .sideproject .project .thumbnail .description p.col-xs-8 {
-        text-align: right;
-        padding-left: 0;
-        padding-right: 0;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 0;
 }
 .sideproject .btn{
-        margin-left: 0;
-        max-width: 129.5px;
+    margin-left: 0;
+    max-width: 129.5px;
 }
 footer .footer{
     background: rgba(0, 0, 0, 0.7);
     border-radius: 5px 5px 0 0;
 }
-
-
+@media screen and (max-width: 990px){
+    .sideproject .project .thumbnail {
+        min-width: 650px;
+    }
+}
 
 
 
