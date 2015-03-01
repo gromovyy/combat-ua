@@ -8,6 +8,7 @@
 		function getRules($role) {
 			$data = $this->DBProc->get_rules($role);
 			$rule_array = Array();
+			
 			foreach($data as $row) {
 				$rule_array[$row["component"]][$row["view"]] = $row["access"];
 			}
