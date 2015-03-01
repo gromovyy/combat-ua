@@ -338,5 +338,21 @@ MEDIA
 @media screen and (max-width: 521px) {
   .right {
     margin-top: -35px; } }
+.actual-margin-botoom{
+margin-bottom: 20px;
+}
+
+
+.color-white{
+color:#fff;
+}
+
+.embed-responsive iframe{
+height:310px !important;
+}
+
+.embed-responsive.embed-responsive-16by9{
+padding-bottom:36.35% !important;
+}
 
 /*# sourceMappingURL=main.css.map */
