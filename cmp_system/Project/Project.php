@@ -3,19 +3,20 @@ class Project extends Contenter {
 
 	// Выводит страничку проекта
 	public function e_View($id_project){
-	
+		$data['project'] = $this->get_row($id_project);
+		$this->loadView("project", $data);
 	}
 
 	// Выводит список проектов с фильтром по типу
-	public function e_List($project_type='all'){
-		$data['projects'] = $this->Model->getProjects();
-		if (empty($data['projects'])) 
-			$data['projects'] = array();
-			
-		$data['id_user'] = $this->User->getId();
-		$data['id_project_active'] = $id_project_active;
-		$data['combo_members'] = $this->Member->combo_user_list();
-		$this->loadView("short_list", $data);
+	public function e_List($id_project_category = NULL){
+		
+		$data['actual_projects'] = $this->Model->getProjects($id_project_category, 'actual');
+		$data['projects'] = $this->Model->getProjects($id_project_category, 'normal');
+		
+		// $data['id_user'] = $this->User->getId();
+		// $data['id_project_active'] = $id_project_active;
+		// $data['combo_members'] = $this->Member->combo_user_list();
+		$this->loadView("list", $data);
 	}
 	
 	// Возвращает список типов проектов

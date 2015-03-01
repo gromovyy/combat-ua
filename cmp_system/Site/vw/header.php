@@ -8,36 +8,38 @@
 	<?php $this->includeCSS("main.css"); ?>
 	<?php $this->includeJS("jquery-1.11.2.min.js"); ?>
 	<?php $this->includeJS("bootstrap.js"); ?>
+	<?php $this->loadCSS();
+		  $this->loadJS();
+		  $this->loadJsData();
+	?>
 </head>
 <body>
-	<div class="container">
-		<header>
-		<div class="menu col-xs-12 col-sm-12 col-md-12">
+	<header>
+		<div class="container">
 			<div class="row">
-				<div class="div1 col-xs-12 col-sm-6 col-md-4">
-					<ul>
-						<li><a href="#">Укр.</a></li>
-						<li><a href="#">Eng.</a></li>
-						<li><a href="#">Рус.</a></li>		
+			<div class="menu col-xs-12">
+			
+				
+					<ul class="list-inline lang">
+						<li><a href="#">UA</a></li>
+						<li><a href="#">ENG</a></li>
+						<li><a href="#">RU</a></li>		
 					</ul>
-					<h1>Combat-UA</h1>
-					<h4>Фонд сприяння полкам спецназу</h4>
-				</div>
-				<div class="div2 col-sm-6 col-md-4">
-					<img src="img/header/u19.jpg" alt="">
-				</div>
-				<div class="div3  col-md-4">
-					<ul>
-						<li><a href="#"><img src="img/header/social/u23.png" alt=""></a></li>
-						<li><a href="#"><img src="img/header/social/u25.png" alt=""></a></li>
-						<li><a href="#"><img src="img/header/social/u27.png" alt=""></a></li>
-						<li><a href="#"><img src="img/header/social/u29.png" alt=""></a></li>
+					<div class="right">
+					<ul class="list-inline socials">
+						<li><a href="#"><img src="lib/img/header/socials/youtube.png" alt=""></a></li>
+						<li><a href="#"><img src="lib/img/header/socials/twitter.png" alt=""></a></li>
+						<li><a href="#"><img src="lib/img/header/socials/facebook.png" alt=""></a></li>
+						<li><a href="#"><img src="lib/img/header/socials/google.png" alt=""></a></li>
 					</ul>
-					<p><a href="">Новини</a> | <a href="">Про нас</a></p>
-				</div>
-			</div>
-			<div class="row">
-				<nav class="navbar navbar-default col-sm-12 col-md-9">
+			
+					<ul class="news">
+						<li class="text-right"><a href="">НОВИНИ</a></li>
+						<li class="text-right"><a href="">ПРО НАС</a></li>
+						<li><a href="">ЯК МИ ПРАЦЮЄМО</a></li>
+					</ul>
+					</div>
+				<nav class="navbar navbar-default ">
 					<div class="container-fluid">
 						<!-- Brand and toggle get grouped for better mobile display -->
 					    <div class="navbar-header">
@@ -62,4 +64,5 @@
 				</nav>
 			</div>
 		</div>
-		</header>
+		</div>
+	</header>

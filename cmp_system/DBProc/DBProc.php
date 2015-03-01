@@ -571,7 +571,7 @@ class DBProc extends Base
 		// Если указана сортировка
 		if (!empty($params['order']) and is_array($params['order'])) {
 			foreach ($params['order'] as $field => $direction) {
-				$order .= $field.' '.$direction.',';
+				$order .= '`'.$field.'` '.$direction.',';
 			}
 			$order = rtrim($order, ",");
 			
@@ -681,7 +681,7 @@ class DBProc extends Base
 	
 	*/
 	protected function get_filters($filters) {
-		if (!empty($filters['field']) and !empty($filters['operator']) and !empty($filters['value'])) {
+		if (!empty($filters['field']) and !empty($filters['operator']) and ($filters['value']!='')) {
 			switch ( $filters['operator']) {
 				case 'in':
 					if (is_array($filters['value']))
