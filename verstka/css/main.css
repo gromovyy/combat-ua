@@ -339,4 +339,18 @@ MEDIA
   .right {
     margin-top: -35px; } }
 
+.color-white{
+color:#fff;    
+}
+
+.embed-responsive.embed-responsive-16by9{
+    padding-bottom:36.25%;
+}
+
+.embed-responsive iframe{
+height:310px !important;
+}
+
 /*# sourceMappingURL=main.css.map */
+
+
