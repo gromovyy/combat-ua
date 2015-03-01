@@ -26,7 +26,8 @@ header {
     background: url("../img/header/background2.png") no-repeat, url("../img/header/background.png") no-repeat;
     height: 255px;
     margin-top: 20px;
-    padding: 0; }
+    padding: 0; 
+  }
 
 .menu h3 {
   margin: 0px;
@@ -132,12 +133,14 @@ Section
   padding: 19px;
   -webkit-border-radius: 5px;
   border-radius: 5px; }
-  .actual h2 {
+ 
+.actual h2 {
     margin: 0;
     color: #ffe232;
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 20px; }
+    margin-bottom: 20px; 
+  }
 
 .thumbnail {
   /*margin-right: 30px;*/
@@ -300,6 +303,25 @@ Section
   background: #999;
   width: 100%;
   height: 50px;
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
+.actual-margin-botoom{
+margin-bottom: 20px;
+}
+
+
+.color-white{
+color:#fff;
+}
 /*# sourceMappingURL=main.css.map */
+
+.embed-responsive iframe{
+height:310px !important;
+}
+
+.embed-responsive.embed-responsive-16by9{
+padding-bottom:36.35% !important;
+}
+
+
