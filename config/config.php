@@ -40,7 +40,7 @@ $GL_HOST = "127.0.0.1";
  * @global string $GL_DB_NAME = "timetracker";
  * @name $GL_DB_NAME = "timetracker";
  */
-$GL_DB_NAME = "combat_ua";
+$GL_DB_NAME = "combat-ua";
 
 /**
  * Пользователь БД

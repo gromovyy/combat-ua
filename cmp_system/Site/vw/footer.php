@@ -1,5 +1,7 @@
 <footer>
-			<div class="footer col-xs-12">
+		<div class="container">
+			<div class="row">
+				<div class="footer col-xs-12">
 				<div class="div11 col-md-3 col-xs-6">
 					<h3>Навігація</h3>
 					<ul>
@@ -35,12 +37,13 @@
 				<div class="div44 col-md-3 col-xs-6">
 					<h3>Підтримати нас</h3>
 					<p>
-						<img src="img/footer.png" alt="" class="col-xs-12">
+						<img src="lib/img/footer.png" alt="" >
 					</p>
 				</div>
 			</div>
-		</footer>
-	</div>
+			</div>
+		</div>
+	</footer>
 </body>
 
 </html>
