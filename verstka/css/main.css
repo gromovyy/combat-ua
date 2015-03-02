@@ -314,6 +314,19 @@ iframe {
   height: auto;
   min-height: 700px;
 }
+/*************************************************
+Project Opys*/
+.opys {
+  background: rgba(0,0,0,0.7);
+  margin-bottom: 15px;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  
+}
+.opys p {
+  color: #FFF;
+}
 /*****************************************************
 Project News */
 
