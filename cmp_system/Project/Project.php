@@ -9,7 +9,8 @@ class Project extends Contenter {
 
 	// Выводит список проектов с фильтром по типу
 	public function e_List($id_project_category = NULL){
-		
+	
+		$data['id_project_category'] = $id_project_category;
 		$data['actual_projects'] = $this->Model->getProjects($id_project_category, 'actual');
 		$data['projects'] = $this->Model->getProjects($id_project_category, 'normal');
 		
@@ -28,6 +29,20 @@ class Project extends Contenter {
 	public function get_combo_projects($id_user = NULL) {
 		$projects = $this->Model->getProjects($id_user);
 		return $this->get_combo($projects['rows'], 'id_project', 'name');
+	}
+	
+		
+	// Добавление нового проекта
+	public function e_Insert($id_project_category = NULL) {
+		$id_row = $this->create_row('prjct_project');
+		// Создаем фотографию, связанную с проектом
+		$id_photo  = $this->Photo->e_Insert('Project',$id_row);
+		// Привязываем её к проекту
+		$this->set_cell("prjct_project","id_photo", $id_row, $id_photo);
+		// Если задано имя категории - добавляем запись
+		if (!empty($id_project_category))
+				$this->set_cell("prjct_project","id_project_category", $id_row, $id_project_category);
+		return $id_row;
 	}
 }
 ?>

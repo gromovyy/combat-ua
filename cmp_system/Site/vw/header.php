@@ -6,8 +6,8 @@
 	<title>Combat-UA</title>
 	<?php $this->includeCSS("bootstrap.min.css"); ?>
 	<?php $this->includeCSS("main.css"); ?>
-	<?php $this->includeJS("jquery-1.11.2.min.js"); ?>
-	<?php $this->includeJS("bootstrap.js"); ?>
+	<?php $this->includeJS("jquery-1.11.2.min.js", 1); ?>
+	<?php $this->includeJS("bootstrap.js", 2); ?>
 	<?php $this->loadCSS();
 		  $this->loadJS();
 		  $this->loadJsData();

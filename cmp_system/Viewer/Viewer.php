@@ -228,7 +228,7 @@ class Viewer extends Base
 	 * @param type $file Имя файла. Неоходимо передавать без пути к файлу.
 	 * @return boolean
 	 */
-	public function includeJS($file)
+	public function includeJS($file, $priority = 5)
 	{
 		if ($component)
 				$cmp = $component;
@@ -262,8 +262,8 @@ class Viewer extends Base
 		}
 
 		// Если имя библиотеки не пустое и не повторяется, добавляем его в массив c именами библиотек
-		if (($lib_name != "") and (!in_array($lib_name, self::$js_libs)))
-			self::$js_libs[] = $lib_name;
+		if (($lib_name != "") and (!array_key_exists($lib_name, self::$js_libs)))
+			self::$js_libs[$lib_name] = $priority;
 
 		//Если подключение успешно - возвращаем TRUE
 		return TRUE;
@@ -349,8 +349,9 @@ class Viewer extends Base
 	 */
 	public function loadJS()
 	{
-		foreach (self::$js_libs as $file)
-			echo '<script type="text/javascript" src="' . $file . '"></script>' . "\n";  //.chr(10)
+		asort(self::$js_libs);
+		foreach (self::$js_libs as $file=>$priority)
+			echo '<script type="text/javascript" src="' . $file . '"></script><!-- priority '.$priority. ' -->' . "\n";  //.chr(10)
 	}
 
 	public function loadJsData(){

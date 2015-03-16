@@ -1,7 +1,7 @@
 <?php 
 if ($is_update) {
 	// Проверка на то можем ли мы подлючтить CkEditor
-	$this->includeJS('//cdnjs.cloudflare.com/ajax/libs/ckeditor/4.2/ckeditor.js');
+	$this->includeJS('//cdnjs.cloudflare.com/ajax/libs/ckeditor/4.2/ckeditor.js', 4);
 }
 ?>
 <!-- <ckeditor> -->

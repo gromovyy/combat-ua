@@ -1,8 +1,11 @@
+<?php 
+	$view_update_link = 'Project/List/'.$id_project_category;
+?>
 	<div>
 		<?php if (!empty($actual_projects['rows'])) { ?>
 		<div class="row">
 			<div class="actual clearfix">
-					<h2 class="text-center">НАЙБІЛЬШ АКТУАЛЬНІ ПРОЕКТИ</h2>
+					<h2 class="text-center">НАЙБІЛЬШ АКТУАЛЬНІ ПРОЕКТИ<?php if ($this->User->getRole() == "administrator") { ?><button class="btn btn-primary" onclick="exec('Project/Insert/<?php echo $id_project_category;?>','Project/List/<?php echo $id_project_category;?>');">Додати <?php } ?></button></h2> 
 					<?php foreach ($actual_projects['rows'] as $project) { ?>
 					<div class="thumbnail project <?php echo $project['state'];?> col-xs-12 col-md-6">
 						<a href="project/<?php echo $project['id_project'];?>">

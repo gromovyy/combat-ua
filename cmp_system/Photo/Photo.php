@@ -54,23 +54,12 @@ class Photo extends Binder {
 	}
 	
 	// Добавление пустой связи с компонентом
-	function e_InsertBind($component, $id_object, $object = "", $id_object_array=Array() ,$photo_type="article") {
-		//Получаем имя таблицы к которой привязывается фотография
-		$table = $this->$component->getTableByObject($object);
+	function e_Insert($component, $id_object, $object = "", $photo_type="article") {
+		$id_row = parent::e_Insert(NULL, $component, $id_object, $object);
 		
-		// Если имя объекта такое же, как и имя компонента, очищаем имя объекта.
-		if (strtolower($component) == strtolower($object)) $object = "";
-		
-		// Проверяем права на вставку фотографии
-//		if (!$this->is_insert() OR !$this->$component->is_update(null, $id_object, null, $table)) return false;
-		$id_row = $this->create_row("pht_photo_bind");
-
-		//Устанавливаем поля имя компонента и идентификатор объекта, к которым привязывается галлерея.
-		$this->set_cell("pht_photo_bind","id_owner", $id_row, $this->$component->get_owner($id_object, $table));
-		$this->set_cell("pht_photo_bind","component", $id_row, $component);
-		$this->set_cell("pht_photo_bind","id_object",$id_row,$id_object);
-		$this->set_cell("pht_photo_bind","object", $id_row, strtolower($object));
-		$this->set_cell("pht_photo_bind","photo_type",$id_row, $photo_type);
+		//Устанавливаем дополнительно поля владелец и тип фотографии.
+		$this->set_cell("pht_photo","id_owner", $id_row, $this->$component->get_owner($id_object, $table));
+		$this->set_cell("pht_photo","photo_type",$id_row, $photo_type);
 		//$this->DBProc->set_default_img($id_row);
 		return $id_row;
 	}

@@ -17,25 +17,45 @@
         "type":"Wireframe",
         "url":"home.html",
         "children":[{
-            "pageName":"About",
+            "pageName":"!About",
             "type":"Wireframe",
-            "url":"about.html"},
+            "url":"_about.html"},
 {
-            "pageName":"Pay",
+            "pageName":"!Pay_Project",
             "type":"Wireframe",
-            "url":"pay.html"},
+            "url":"_pay_project.html"},
 {
-            "pageName":"Project",
+            "pageName":"!Pay_Free",
             "type":"Wireframe",
-            "url":"project.html"},
+            "url":"_pay_free.html"},
 {
-            "pageName":"Category",
+            "pageName":"!All Projects",
             "type":"Wireframe",
-            "url":"category.html"},
+            "url":"_all_projects.html"},
 {
-            "pageName":"News",
+            "pageName":"!Project",
             "type":"Wireframe",
-            "url":"news.html"}]}]},
+            "url":"_project.html"},
+{
+            "pageName":"!News",
+            "type":"Wireframe",
+            "url":"_news.html"},
+{
+            "pageName":"!Donation Instructions",
+            "type":"Wireframe",
+            "url":"_donation_instructions.html"},
+{
+            "pageName":"!Diaspora",
+            "type":"Wireframe",
+            "url":"_diaspora.html"},
+{
+            "pageName":"!Recomend_1",
+            "type":"Wireframe",
+            "url":"_recomend_1.html"},
+{
+            "pageName":"!Buisness",
+            "type":"Wireframe",
+            "url":"_buisness.html"}]}]},
   "globalVariables":{
     "onloadvariable":""},
   "defaultAdaptiveView":{

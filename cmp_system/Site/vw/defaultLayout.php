@@ -9,8 +9,8 @@
 		
 		
 		$this->loadCSS();
-		$this->includeJS('upload_script.js');
-		$this->includeJS('viewer.js');
+		$this->includeJS('upload_script.js',3);
+		$this->includeJS('viewer.js',4);
 		
 		$this->loadJsData();
 		$this->loadJS();

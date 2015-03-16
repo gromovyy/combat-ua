@@ -48,15 +48,15 @@ class Contenter extends Viewer
 		// $this->includeJS('//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 			// <script>window.jQuery || document.write("<script src=\'lib/js/jquery_1.9.1.js\'><\/script>")</script>
 			// <script async ="true" src="lib/js/main.js');
-		$this->includeJS("jquery-2.1.1.min.js");
-		$this->includeJS('main.js');
-		
+		//$this->includeJS("jquery-2.1.1.min.js");
+		$this->includeJS('main.js',6);
+		$this->includeJS('viewer.js',6);
 
 		//$this->includeJS('infinite.js');
 
-		$this->includeJS('jquery.hotkeys.js');
-		$this->includeJS('jquery.autoresize.js');
-		$this->includeJS('viewer.js');
+		$this->includeJS('jquery.hotkeys.js',4);
+		$this->includeJS('jquery.autoresize.js',5);
+		
 		$this->includeCSS('contenter.css');
 	}
 
