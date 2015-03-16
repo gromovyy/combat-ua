@@ -64,7 +64,7 @@ header {
 
 .news {
   clear: both;
-  height: 150px;      /*ÒÓÒ ÇÀÊÎÌÅÍÒÓÂÀËÀ ÌÀÐÈÍÀ ÄËß NEWS*/       
+  height: 150px;         
   margin-top: 5px;
   margin-bottom: 10px; }
   .news li {
@@ -141,7 +141,7 @@ Section
     font-weight: bold;
     margin-bottom: 20px; }
 
-.thumbnail {
+.project {
   /*margin-right: 30px;*/
   padding: 20px 44px 25px;
   width: 445px;                     
@@ -149,18 +149,18 @@ Section
   background: #fff;
   margin-bottom: 0;
   min-width: 430px; }
-  .thumbnail img {
+  .project img {
     margin-bottom: 20px;
     max-height: 147px; }
-  .thumbnail h3 {
+  .project h3 {
     font-size: 25px;
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     font-weight: bold; }
-  .thumbnail p {
+  .project p {
     font-size: 12px;
     margin-bottom: 15px; }
-  .thumbnail a {
+  .project a {
     text-decoration: none;
     color: #000; }
 
@@ -199,7 +199,7 @@ Section
 .btn:hover, .btn:active, .btn:visited {
   background: #4BC340; }
 
-.row .thumbnail:nth-child(odd) {
+.row .project:nth-child(odd) {
   float: right; }
 
 .normal {
@@ -247,6 +247,41 @@ footer {
     color: #FFF;
     font-weight: bold;
     font-size: 20px; }
+/****************************************************
+NEWS
+**************************************************/
+
+.novosti p, .novosti h4, .novosti .date, .novosti h3{
+    color: #fff;
+}
+ .wrapper{
+  padding-bottom: 10px;
+    background: rgba(0,0,0,0.7);
+    margin-top: 19px;
+    margin-bottom: 19px;
+    border-radius: 5px;
+}
+
+.sideproject .project {
+  max-width: 100%;
+  padding: 15px;
+  min-width: 0;
+  margin-top: 10px;
+}
+.sideproject .project .btn {
+  margin: 0;
+  max-width: 100%;
+}
+.sideproject .summa {
+  margin: 0;
+  float: none;
+}
+.sideproject .polosa {
+  width: 100%;
+}
+.sideproject .progress {
+  width: 100%;
+} 
 
 /*****************************************************
 Project
@@ -304,15 +339,67 @@ Project
 .upper .btn:hover, .upper .btn:active, .upper .btn:visited {
   background: #4BC340; }
 .upper .share {
-  background: #999;
   width: 100%;
-  height: 50px;
-  margin-top: 20px; }
+  height: 40px;
+  margin-top: 20px; 
+  }
+.share p {
+  line-height: 40px;
+    margin: 0;
+    color: #FFF;
+}
 iframe {
   width: 100%;
   background: rgba(0,0,0,0.7);
   height: auto;
   min-height: 700px;
+}
+/*************************************************
+Project Opys*/
+.opys {
+  /*background: rgba(0,0,0,0.7);*/
+  background: #FFF;
+  margin-bottom: 15px;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  
+}
+.opys p {
+  /*color: #FFF;*/
+  margin-top: 15px;
+}
+.opys img {
+  float: left;
+  width: 150px;
+  margin-right: 15px;
+}
+.item {
+  padding: 15px;
+}
+.item img {
+  max-width: 80px;
+}
+.item #middle {
+  width: 70%;
+  display: inline-block;
+  height: 80px;
+}
+.item p {
+  display:inline-block;
+}
+.item small:last-child {
+  float: right
+}
+#middle p {
+  margin: 0;
+}
+#middle .progress {
+  margin-bottom: 5px;
+}
+.item>p {
+  vertical-align: top;
+  float: right;
 }
 /*****************************************************
 Project News */
@@ -330,35 +417,40 @@ Project News */
 
 .novyna h2{
     margin:5px 0;
-    color: #FFF;    
+    /*color: #FFF;    */
 }
 
 .novyna p{
     margin:5px 0;
-    color: #FFF;
+    /*color: #FFF;*/
 }
 .date {
     margin:0 0 8px 0;
-    color: #FFF;
+    /*color: #FFF;*/
 }
 .novyny {
-  background: rgba(0,0,0,0.7);
+  /*background: rgba(0,0,0,0.7);*/
+  background: #FFF;
   padding: 10px;
   margin-bottom: 15px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
 }
+.new {
+  margin-bottom: 20px;
+}
 /*************************************
 Project zvit*/
 .zvit {
-  background: rgba(0,0,0,0.7);
+  /*background: rgba(0,0,0,0.7);*/
+  background: #FFF;
   margin-bottom: 15px;
   padding: 10px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
 }
 .info-cost {
-    color: #FFF;
+    /*color: #FFF;*/
     width: 100%;
     line-height: 65px;
     min-height:65px;    
@@ -366,12 +458,12 @@ Project zvit*/
     border-bottom:1px solid #ccc;
 }
 .info-cost b{
-color:#fff;
+/*color:#fff;*/
 }
 .info-cost a.ask{
     font-size:14px;
     border-bottom: 1px dashed #000;
-    color:#fff;
+    /*color:#fff;*/
     text-decoration:none;
     float: right;
     line-height:20px;
@@ -386,7 +478,7 @@ width: 15px;
 height: 11px;
 border-radius: 50%;
 background: #000;
-color: #fff;
+/*color: #fff;*/
 padding: 0 0 9px 6px;
 position: absolute;
 left: -25px;
@@ -400,12 +492,15 @@ font-size: 18px;
     text-transform:uppercase;
     padding:0 20px;
     line-height: 40px;
-    color:#fff;
+    /*color:#fff;*/
     margin:20px 0 10px 0;
 }
 .table-top span{
     float:right;
     color:#fff
+}
+.table-top {
+  color: #FFF;
 }
 
 .table-zvit table{
@@ -434,16 +529,16 @@ text-align: right !important;
 
 .commission {
     font-size:10px;
-    color:#fff;
+    /*color:#fff;*/
 }
 th {
-  color: #FFF;
+  /*color: #FFF;*/
 }
 td {
-  color: #FFF;
+  /*color: #FFF;*/
 }
 .zvit p {
-  color: #FFF;
+  /*color: #FFF;*/
 }
 
 
@@ -467,7 +562,7 @@ Subcategory
 MEDIA
 **********************************************************/
 @media screen and (max-width: 991px) {
-  .thumbnail, .thumbnail:nth-child(odd) {
+  .project, .project:nth-child(odd) {
     float: none !important;
     margin: auto;
     margin-bottom: 15px; }
@@ -481,14 +576,20 @@ MEDIA
     background: #FFF; } }
 @media screen and (max-width: 767px) {
   .menu {
-    background: none !important; }
-
+    background: none !important; 
+    }
   .nav li {
     margin-left: 15px;
     width: 100%; }
-
   header {
-    background: none; } }
+    background: none; }
+    .footer .col-md-3 {
+      text-align: center;
+    }  
+   .item>p {
+     float: none;
+   }  
+  }
 @media screen and (max-width: 521px) {
   .right {
     margin-top: -35px; } }
@@ -509,51 +610,6 @@ height:310px !important;
 padding-bottom:36.35% !important;
 }
 
-/*NEWS*/
-.wrapper .news {
-  height: auto;
-}
-.news p, .news h4, .news .date, .news h3{
-    color: #fff;
-}
-section .wrapper{
-    background: rgba(0,0,0,0.7);
-    margin-top: 19px;
-    margin-bottom: 19px;
-    border-radius: 5px;
-}
-.sideproject .project .thumbnail{
-    margin: 20px 0 20px 0;
-    height: 350px;
-    padding: 4px;
-    min-width: 0;
-    max-width: 250px;
-}
-
-.sideproject .project .thumbnail .description p.col-xs-2 {
-    text-align: left;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-}
-.sideproject .project .thumbnail .description p.col-xs-8 {
-    text-align: right;
-    padding-left: 0;
-    padding-right: 0;
-}
-.sideproject .btn{
-    margin-left: 0;
-    max-width: 129px;
-}
-footer .footer{
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 5px 5px 0 0;
-}
-@media screen and (max-width: 990px){
-    .sideproject .project .thumbnail {
-        /*min-width: 650px;*/
-    }
-}
 
 
 
